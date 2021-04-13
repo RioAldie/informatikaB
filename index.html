@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatika B</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="head">
+        <div id="logo">InformatikaB</div>
+        <div id="menu" class="menu-toggle" v-on:click="active">
+            <i class="fas fa-bars">
+            </i></div>
+        <nav id="nav">
+            <ul>
+            <li><a href="">Home</a></li> 
+            <li><a href="">Jadwal</a></li> 
+            <li><a href="">Team</a></li> 
+            <li><a href="">Kontak</a></li> 
+        </ul></nav>
+
+    </header>
+    <main class="main">
+        <article id="jadwal">
+            <div id="kelas">
+     <div class="item" v-for="item in dua" >
+         <span v-on:click="lihat = !lihat"><h1>{{item.hari}} </h1></span>
+          
+         <div v-if="lihat==true">
+          <h2>{{item.mapel}}</h2>
+          <h2>{{item.jam}}</h2>
+          <h2>{{item.mapelDua}}</h2>
+          <h2>{{item.jamDua}}</h2>
+         </div>
+     </div>
+    </div>
+        </article>
+    </main>
+    <footer class="foot">
+        <div>
+            <h4>UNP Kediri</h4>
+            <h4>Informatika B 2020</h4>
+            <h4>@rioAldie</h4>
+        </div>
+    </footer>
+    
+</body>
+<script src="anime.min.js"></script>
+<script src="file.js"></script>
+<script src="script.js"></script>
+</html>
